@@ -1,0 +1,81 @@
+# AI-Powered Emotion Detection from Text
+# Complete Project Implementation
+
+# Install required libraries
+!pip install nltk pandas scikit-learn seaborn matplotlib -q# Step 1: Import Libraries
+import pandas as pd
+import numpy as np
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+import re
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
+
+# Download required NLTK data
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
+nltk.download('averaged_perceptron_tagger', quiet=True)
+
+print("✓ Libraries imported successfully!")
+print("✓ NLTK data downloaded!")# Step 2: Create Sample Dataset
+# For this project, we'll create a sample dataset with emotions
+# In production, use: Emotion Dataset or Twitter Sentiment Dataset
+
+data = {
+    'text': [
+        'I am so happy today, everything is perfect!',
+        'I am very sad, nothing seems to go right.',
+        'I am angry at this situation.',
+        'What an amazing surprise!',
+        'I feel neutral about this matter.',
+        'I am feeling terrible and depressed.',
+        'This is wonderful news!',
+        'I hate this, it makes me furious.',
+        'I do not care about this.',
+        'What a terrible day this has been.',
+        'I love this so much!',
+        'I am shocked and surprised.',
+        'This is okay, nothing special.',
+        'I am deeply disappointed.',
+        'Absolutely delighted with this outcome!',
+        'I feel like giving up.',
+        'Really astonished by this turn of events.',
+        'It is just another day.',
+        'This has left me heartbroken.',
+        'I am thrilled beyond belief!'
+    ],
+    'emotion': [
+        'happy', 'sad', 'angry', 'surprised', 'neutral',
+        'sad', 'happy', 'angry', 'neutral', 'sad',
+        'happy', 'surprised', 'neutral', 'sad', 'happy',
+        'sad', 'surprised', 'neutral', 'sad', 'happy'
+    ]
+}
+
+df = pd.DataFrame(data)
+print("Dataset created successfully!")
+print(f"\nDataset shape: {df.shape}")
+print(f"\nFirst few rows:")
+print(df.head())
+print(f"\nEmotion distribution:")
+print(df['emotion'].value_counts())
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+/tmp/ipython-input-2603826819.py in <cell line: 0>()
+     34 }
+     35 
+---> 36 df = pd.DataFrame(data)
+     37 print("Dataset created successfully!")
+     38 print(f"\nDataset shape: {df.shape}")
+
+NameError: name 'pd' is not defined
