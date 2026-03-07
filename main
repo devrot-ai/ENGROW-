@@ -1,7 +1,4 @@
-# AI-Powered Emotion Detection from Text
-# Complete Project Implementation
-
-# Install required libraries
+#can be changed when during the test run of the code 
 !pip install nltk pandas scikit-learn seaborn matplotlib -q# Step 1: Import Libraries
 import pandas as pd
 import numpy as np
