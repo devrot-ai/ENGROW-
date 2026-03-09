@@ -10,17 +10,17 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# ---------- CONFIG ----------
 
-RESUME_FOLDER = "resumes"          # folder containing candidate PDFs
+
+RESUME_FOLDER = "resumes"          
 JOB_DESC_FILE = "job_description.txt"
 
-# Simple skill dictionary (you can expand this as needed)
+
 TECH_SKILLS = [
     "python", "java", "c++", "javascript", "react", "node", "django",
     "flask", "sql", "mysql", "postgresql", "mongodb", "git", "docker",
     "kubernetes", "aws", "azure", "gcp", "html", "css", "pandas", "numpy",
-    "tensorflow", "pytorch", "nlp", "machine learning", "deep learning",
+    "tumberler"
 ]
 
 SOFT_SKILLS = [
@@ -259,3 +259,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
