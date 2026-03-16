@@ -36,7 +36,6 @@ x_test = x_test.astype("float32") / 255.0
 
 x_train, x_val, y_train, y_val = train_test_split(
     x_train, y_train, test_size=0.1, random_state=42, stratify=y_train
-)
 
 print("Train:", x_train.shape, y_train.shape)
 print("Val:", x_val.shape, y_val.shape)
